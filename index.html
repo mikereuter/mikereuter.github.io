@@ -1,7 +1,45 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
+<head>
+    <title>Welcome to Mikereuter.com!</title>
+
+    <!--Vertex Shader to define the vertex positions and transformations-->
+    <script id="vertex-shader" type="x-shader/x-vertex">
+        attribute vec4 vPosition;
+        uniform mat4 modelViewMatrix;
+        uniform mat4 projectionMatrix;
+
+        void main() {
+            gl_Position = projectionMatrix * modelViewMatrix * vPosition;
+        }
+
+    </script>
+
+    <!--Fragment Shader to define the colors-->
+    <script id="fragment-shader" type="x-shader/x-fragment">
+        precision mediump float;
+        uniform vec4 uColor;
+
+        void main() {
+            gl_FragColor = uColor;
+        }
+
+    </script>
+
+    <!--Common Files found online from CSU @https://gitlab.umiacs.umd.edu/ruofei/WebGL/tree/master/Common -->
+    <script src="common/webgl-utils.js"></script>
+    <script src="common/initShaders.js"></script>
+    <script src="common/flatten.js"></script>
+    <script src="common/MV.js"></script>
+    <script src="index.js"></script>
+</head>
+
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+<div>Welcome to Mikereuter.com!</div>
+<canvas id="gl-canvas" width="512" height="512">
+    Uh oh...your browser does not support the HTML5 canvas element.
+</canvas>
 </body>
+
 </html>
