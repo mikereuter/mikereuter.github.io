@@ -1,2 +1,2 @@
 # mikereuter.github.io
-Click [(https://mikereuter.github.io/)] to go to "mikereuter.com"
+Click (https://mikereuter.github.io/) to go to "mikereuter.com"
